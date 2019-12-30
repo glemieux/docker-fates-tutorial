@@ -5,9 +5,10 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ~/Work/Scripts:/home/scripts
+      - ~/Work/DockerTemp/Scripts:/work/scripts # This isn't working
   hostmodel:
       image: ngeetropics/elmtest:v7
       volumes:
-        - ~/inputdata:/data
-        - ~/scratch/docker-output:/ouput
+        - ~/Work/DockerTemp/inputdata:/data
+        - ~/Work/DockerTemp/scratch/docker-output:/ouput
+        - ~/Work/DockerTemp/scripts:/E3SM/cime/scripts
